@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRI-STAGRAM</title>
+    <link rel="stylesheet" type="text/css" href="./static/1_style.css" />
+    <link rel="stylesheet" type="text/css" href="./static/2_home_style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="nav">
+        <div class="nav_container">
+            <h1>Pri-stagram</h1>
+            <div class="search">
+                <img src="./static/images/search_icon.svg" width="16px"/>
+                <form>
+                    <input type="text" id="search_txt" placeholder="검색" width="100%"/>
+                </form>
+            </div>
+            <div class="nav_menu">
+                <a href="#" id="home">home</a>
+                <a href="#" id="notice">notice</a>
+                <a href="./explore.html" id="explore">explore</a>
+            </div>
+        </div>
+    </div>
+    <!-- nav end -->
+    <ul id="post">
+        <li class="post_container">
+            <div class="post_top">
+                <div>
+                    <div class="profile_img">
+                        <img src="./static/images/profile_img_1.jpg"/>
+                    </div>
+                    <div class="user_id">username1</div>
+                </div>
+                <img src="./static/images/more_icon.svg" width="24px"/>
+            </div>
+            <div class="post_img">
+                <img src="./static/images/post_img_1.jpg"/>
+            </div>
+            <div class="post_contents">
+                <div class="post_icons">
+                    <img class="heart" src="./static/images/heart_icon.svg" width="24px"/>
+                    <img class="message" src="./static/images/message_icon.svg" width="24px"/>
+                    <img class="bookmark" src="./static/images/bookmark_icon.svg" width="24px"/>
+                </div>
+                <div class="post_text">
+                    <div class="liked">좋아요 412,203개</div>
+                    <div class="writed"><span>username1</span> 인스타그램 웹 디자인 따라하기(?)</div>
+                    <div class="commented">댓글 1,230개 모두 보기</div>
+                    <div class="time">16시간 전</div>
+                </div>
+            </div>
+            <div class="post_comments">
+                <div class="imogi">😊</div>
+                <form onsubmit="comment_submit(); reset(); return false">
+                    <textarea type="text" class="comment_txtarea" row=2 placeholder="댓글 달기..."></textarea>
+                </form>
+                <button type="submit" class="comment_btn" onclick="write_comment(0);">게시</button>
+            </div>
+
+        </li>
+        <li class="post_container">
+            <div class="post_top">
+                <div>
+                    <div class="profile_img">
+                        <img src="./static/images/profile_img_2.jpg"/>
+                    </div>
+                    <div class="user_id">username2</div>
+                </div>
+                <img src="./static/images/more_icon.svg" width="24px"/>
+            </div>
+            <div class="post_img">
+                <img src="./static/images/post_img_2.jpg"/>
+            </div>
+            <div class="post_contents">
+                <div class="post_icons">
+                    <img class="heart" src="./static/images/heart_icon.svg" width="24px"/>
+                    <img class="message" src="./static/images/message_icon.svg" width="24px"/>
+                    <img class="bookmark" src="./static/images/bookmark_icon.svg" width="24px"/>
+                </div>
+                <div class="post_text">
+                    <div class="liked">좋아요 412,203개</div>
+                    <div class="writed"><span>username2</span> 인스타그램 웹 디자인 따라하기(?)</div>
+                    <div class="commented">댓글 1,230개 모두 보기</div>
+                    <div class="time">20시간 전</div>
+                </div>
+            </div>
+            <div class="post_comments">
+                <div class="imogi">😊</div>
+                <form onsubmit="comment_submit(); reset(); return false">
+                    <textarea type="text" class="comment_txtarea" row=2 placeholder="댓글 달기..."></textarea>
+                </form>
+                <button type="submit" class="comment_btn" onclick="write_comment(1);">게시</button>
+            </div>
+
+        </li>
+        <li class="post_container">
+            <div class="post_top">
+                <div>
+                    <div class="profile_img">
+                        <img src="./static/images/profile_img_3.jpg"/>
+                    </div>
+                    <div class="user_id">username3</div>
+                </div>
+                <img src="./static/images/more_icon.svg" width="24px"/>
+            </div>
+            <div class="post_img">
+                <img src="./static/images/post_img_3.jpg"/>
+            </div>
+            <div class="post_contents">
+                <div class="post_icons">
+                    <img class="heart" src="./static/images/heart_icon.svg" width="24px"/>
+                    <img class="message" src="./static/images/message_icon.svg" width="24px"/>
+                    <img class="bookmark" src="./static/images/bookmark_icon.svg" width="24px"/>
+                </div>
+                <div class="post_text">
+                    <div class="liked">좋아요 412,203개</div>
+                    <div class="writed"><span>username3</span> 인스타그램 웹 디자인 따라하기(?)</div>
+                    <div class="commented">댓글 1,230개 모두 보기</div>
+                    <div class="time">2일 전</div>
+                </div>
+            </div>
+            <div class="post_comments">
+                <div class="imogi">😊</div>
+                <form onsubmit="comment_submit(); reset(); return false">
+                    <textarea type="text" class="comment_txtarea" row=2 placeholder="댓글 달기..."></textarea>
+                </form>
+                <button type="submit" class="comment_btn" onclick="write_comment(2);">게시</button>
+            </div>
+
+        </li>
+
+    </ul>
+    <script lang="javascript">
+        var img_loc = './static/images/';
+
+        // heart 이미지 클릭 시 로테이션으로 변경
+        $('.heart').on({'click' : function() {
+            var src = ($(this).attr('src') == img_loc + 'heart_icon.svg')
+                ? img_loc + 'heart_active.svg'
+                : img_loc + 'heart_icon.svg';
+                $(this).attr('src', src);
+            }
+        });
+
+        $('.message').on({'click' : function() {
+            alert('메시지 보내!');
+            }
+        });
+
+        $('.bookmark').on({'click' : function() {
+            var src = ($(this).attr('src') == img_loc + 'bookmark_icon.svg')
+                ? img_loc + 'bookmark_active.svg'
+                : img_loc + 'bookmark_icon.svg';
+                $(this).attr('src', src);
+            }
+        });
+
+        function write_comment(n) {
+            var textarea = document.querySelectorAll('.comment_txtarea');
+            alert('댓글을 달았어요! : ' + textarea[n].value);
+        }
+
+        document.querySelector('#notice').addEventListener('click', function() {
+            alert('\n1. 반응형 인스타 클론코딩\n2. 하트, 메시지, 북마크 아이콘 클릭 시 이벤트\n3. 댓글 입력 후 게시버튼 클릭 시 이벤트\n4. 상단 home, notice, explore 메뉴 클릭 시 이벤트\n');
+        });
+    </script>
+</body>
+</html>

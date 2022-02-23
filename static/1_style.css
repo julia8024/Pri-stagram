@@ -1,0 +1,54 @@
+/* 인스타그램 로고 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+/* font-family: 'Cookie', cursive; */
+
+/* 기본 폰트 */
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+/* font-family: 'NanumSquare'; */
+
+/* 포인트 폰트 - explore 페이지 */
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://2022-01-newyear.s3.ap-northeast-2.amazonaws.com/Cafe24Ssurround.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Cafe24Oneprettynight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 미디어쿼리 */
+@import url(cssscreen.css) screen;
+
+* {
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+
+/* input 스타일 */
+input {
+    background: none;
+    font-size: 14px;
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* textarea 스타일 */
+textarea {
+    font-size: 14px;
+    border: none;
+    resize: none;
+}
+
+textarea:focus {
+    outline: none;
+}

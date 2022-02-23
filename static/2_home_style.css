@@ -1,0 +1,242 @@
+/* body */
+body {
+    background-color: #fafafa;
+    font-family: 'NanumSquare';
+    font-weight: 400;
+}
+
+
+/* nav */
+#nav {
+    height: 60px;
+    width: 100vw;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+    line-height: 60px;
+    position: sticky;
+    background-color: white;
+    z-index: 1000;
+    top: 0;
+}
+
+#nav .nav_container {
+    display: flex;
+    max-width: 980px;
+    margin: auto;
+}
+
+#nav .nav_container h1 {
+    display: block;
+    font-family: 'Cookie', cursive;
+    font-size: 32px;
+    color: black;
+    margin-left: 28px;
+    margin-right: 28px;
+    white-space:nowrap;
+}
+
+#nav .nav_container .search {
+    background-color: #efefef;
+    border-radius: 10px;
+    display: flex;
+    padding-left: 16px;
+    margin: auto;
+
+    width: 36vh;
+    height: 36px;
+
+    /* 최대 400px일때까지만 크기가 늘어남 */
+    max-width: 400px;
+}
+
+#nav .nav_container .search input {
+    margin: auto;
+    margin-left: 10px;
+    height: 36px;
+    display: block;
+}
+
+
+#nav .nav_container .nav_menu {
+    display: flex;
+    margin-left: 28px;
+}
+
+#nav .nav_container .nav_menu > a {
+    display: block;
+    margin-right: 28px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #8e8e8e;
+}
+
+#nav .nav_container .nav_menu > a:hover {
+    color: black;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#nav .nav_container .nav_menu > a:active {
+    color: #8e8e8e;
+}
+
+/* post */
+#post {
+    padding-top: 32px;
+    padding-bottom : 32px;
+    margin: auto;
+    width: 100vw;
+    max-width: 620px;
+}
+
+#post .post_container {
+    background-color: #fff;
+    border: 1px solid #efefef;
+    font-size: 14px;
+    color: black;
+    margin-bottom: 32px;
+}
+
+/* post_top */
+#post .post_top {
+    display: flex;
+    height: 60px;
+    line-height: 60px;
+    margin: auto 20px;
+}
+
+#post .post_top > div {
+    display: flex;
+}
+
+#post .post_top .profile_img {
+    border-radius: 50px;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    margin: auto;
+}
+
+#post .post_top .profile_img > img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#post .post_top .user_id {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+#post .post_top > img {
+    display: block;
+    margin-left: auto;
+}
+
+/* post_img */
+#post .post_img {
+    width: fit-content;
+    max-width: 620px;
+    overflow: hidden;
+}
+
+#post .post_img > img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* post_contents */
+#post .post_contents {
+    margin: 20px;
+}
+
+#post .post_contents .post_icons {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#post .post_contents .post_icons > img:not(:last-child) {
+    margin-right: 20px;
+}
+
+#post .post_contents .post_icons > img:last-child {
+    margin-left: auto;
+}
+
+#post .post_contents .post_text > div:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+#post .post_contents .post_text .liked,
+#post .post_contents .post_text .writed > span {
+    font-weight: bold;
+}
+
+#post .post_contents .post_text .commented {
+    color: #8e8e8e;
+}
+
+#post .post_contents .post_text .time {
+    color: #8e8e8e;
+    font-size: 10px;
+}
+
+/* post_comments */
+#post .post_comments {
+    display: flex;
+    margin: 20px;
+}
+
+#post .post_comments > .imogi {
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+#post .post_comments form {
+    width: 70%;
+}
+
+#post .post_comments textarea {
+    width: 100%;
+    height: 100%;
+}
+
+#post .post_comments > button {
+    color: blue;
+    font-weight: bold;
+    background: none;
+    border: none;
+    margin-left: auto;
+}
+
+#post .post_comments > button:active {
+    outline: none;
+    color: rgba(0, 0, 255, 0.5);
+}
+
+
+/* 모바일 : screen width <= 767px */
+@media (max-width:767px) {
+    /* nav */
+    #nav {
+        width: 100%;
+    }
+    #nav .nav_container h1 {
+        font-size: 28px;
+    }
+
+    #nav .nav_container .search {
+        display: none;
+    }
+
+    #nav .nav_container .nav_menu {
+        margin-left: auto;
+    }
+}
+
+@media (max-width:400px) {
+    html {
+        width: max-content;
+    }
+}
+

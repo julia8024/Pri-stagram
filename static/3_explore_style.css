@@ -1,0 +1,54 @@
+.background {
+    background: linear-gradient(45deg, #C5D2E5, #D5E1ED);
+    font-family: 'Cafe24Ssurround';
+    width: 100vw;
+    height: 100vh;
+
+    /* 배경 가운데 정렬 */
+    margin: auto;
+    text-align: center;
+}
+h1 {
+    display: inline-block;
+    width: 50vw;
+    margin: 50px auto;
+    text-align: center;
+    padding: 0;
+    color: black;
+}
+.button {
+    color: black;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 6px;
+    width: fit-content;
+    margin: 20px auto;
+}
+.button a {
+    color: black;
+}
+.button:hover {
+    border: 2px solid white;
+}
+.button a:hover {
+    color: white;
+}
+.button:active {
+    border: 2px solid black;
+}
+.button a:active {
+    color: black;
+}
+.text {
+    margin-top: 30px;
+    font-family: 'Cafe24Oneprettynight';
+}
+.text h5 p {
+    color: #888;
+}
+
+.go_home {
+    font-family: 'Cafe24Oneprettynight';
+    text-decoration: underline;
+    color: black;
+}
